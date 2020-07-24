@@ -1,0 +1,26 @@
+
+<div class="form">
+    <mat-card class="card">
+        <mat-card-title>Registrar tarea</mat-card-title>
+    
+    <mat-card-content>
+        <div class="container">
+            <mat-form-field>
+                <input [(ngModel)]="createTask.name" matInput placeholder="Nombre de la tarea">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input [(ngModel)]="createTask.description" matInput placeholder="Descripcion de la tarea">
+            </mat-form-field>
+
+            <input type="file" (change)="onFileSelected($event)">
+        </div>
+    </mat-card-content>
+
+    <mat-card-actions>
+       <!-- <button (click)="create()" class="button" mat-raised-button color="primary">Registrar tarea</button>-->
+       <button (click) = "createUploadImage()" class="button" mat-raised-button>Registrar</button>
+    </mat-card-actions>
+
+ </mat-card>
+</div>
